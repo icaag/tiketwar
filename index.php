@@ -111,5 +111,22 @@
         $kodePromo = "2" . "2" . "2";
         echo $kodePromo; // ternyata hasilnya "222"
     ?>
+
+    <!-- Latihan Debugging: Switch Case -->
+    <?php 
+        $kategori = "VIP";
+        switch ($kategori) {
+            case "Festival":
+                echo "Festival Pass";
+            break;
+            case "VIP":
+                echo "VIP Access";
+            break;
+            case "Reguler":
+                echo "Reguler";
+            break;
+        }
+    ?>
+    
 </body>
 </html>
