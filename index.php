@@ -49,6 +49,28 @@
     <p>Harga asli: Rp<?php echo $hargaAsli; ?></p>
     <p>Setelah diskon <?php echo $persenDiskon; ?>%: Rp<?php echo $hargaSetelahDiskon; ?></p>
 
+    <?php
+        $sisaTiket = $daftarKonser[0]["harga"] > 0 ? 15 : 0; // contoh sederhana
+        if ($sisaTiket > 10) {
+            $statusTiket = "Masih Banyak";
+        } elseif ($sisaTiket > 0) {
+            $statusTiket = "Sisa Dikit, Buruan!";
+        } else {
+            $statusTiket = "Sold Out";
+        }
+
+        $kategori = $daftarKonser[0]["kategori"];
+        switch ($kategori) {
+            case "Festival": $badge = "Festival Pass"; break;
+            case "VIP": $badge = "VIP Access"; break;
+            case "Reguler": $badge = "Reguler"; break;
+            default: $badge = "Kategori tidak dikenali";
+        }
+    ?>
+
+    <p>Status: <?php echo $statusTiket; ?></p>
+    <p>Kategori: <?php echo $badge; ?></p>
+
     <!-- Latihan Debbuging: Tipe Data -->
     <?php
         $namaArtis = "NCT Dream";
