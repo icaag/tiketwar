@@ -8,5 +8,10 @@
     <?php
         echo "Selamat datang di TiketWar - war tiket konser paling gercep!";
     ?>
+
+    <br><br>
+    <?php
+        echo "Tiket akan segera dibuka!";
+    ?>
 </body>
 </html>
