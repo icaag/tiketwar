@@ -34,5 +34,12 @@
     <?php
         echo "Tiket akan segera dibuka!";
     ?>
+
+    <!-- Latihan Debugging: Penamaan Variabel -->
+    <br><br>
+    <?php
+        $namaKonser = "Dewa 19 Reunion Show";
+        echo "Konser pilihan: " . $namaKonser;
+    ?>
 </body>
 </html>
