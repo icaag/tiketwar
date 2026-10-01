@@ -39,7 +39,15 @@
     <p>Sisa tiket: <?php echo $sisaTiket; ?></p>
     <p>Kategori Tiket: <?php echo $kategoriTiket; ?></p>
 
-   
+   <?php
+        $hargaAsli = $daftarKonser[0]["harga"];
+        $persenDiskon = 20;
+        $hargaSetelahDiskon = $hargaAsli - ($hargaAsli * $persenDiskon / 100);
+        $tiketMasihAda = $daftarKonser[0]["harga"] > 0;
+    ?>
+    
+    <p>Harga asli: Rp<?php echo $hargaAsli; ?></p>
+    <p>Setelah diskon <?php echo $persenDiskon; ?>%: Rp<?php echo $hargaSetelahDiskon; ?></p>
 
     <!-- Latihan Debbuging: Tipe Data -->
     <?php
