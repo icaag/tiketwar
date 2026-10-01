@@ -45,7 +45,7 @@
         $hargaSetelahDiskon = $hargaAsli - ($hargaAsli * $persenDiskon / 100);
         $tiketMasihAda = $daftarKonser[0]["harga"] > 0;
     ?>
-    
+
     <p>Harga asli: Rp<?php echo $hargaAsli; ?></p>
     <p>Setelah diskon <?php echo $persenDiskon; ?>%: Rp<?php echo $hargaSetelahDiskon; ?></p>
 
@@ -78,6 +78,16 @@
     <?php
         $tiket = ["nama" => "VIP", "harga" => 500000];
         echo $tiket["harga"];
+    ?>
+
+    <!-- Latihan Debugging: Operator -->
+    <br><br>
+    <?php
+        $jumlahTiket = "2";
+        $totalHarga = $jumlahTiket + $jumlahTiket + $jumlahTiket;
+        echo $totalHarga . " "; // menghasilkan 6, bukan "222"
+        $kodePromo = "2" . "2" . "2";
+        echo $kodePromo; // ternyata hasilnya "222"
     ?>
 </body>
 </html>
