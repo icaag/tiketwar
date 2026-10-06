@@ -32,12 +32,15 @@
         $kategoriTiket = "Festival"
     ?>
 
-    <p>Konser terdekat: <?php echo $daftarKonser[0]["nama"]; ?></p>
-    <p>Tanggal: <?php echo $daftarKonser[0]["tanggal"]; ?></p>
-    <!-- <p>Konser: <?php //echo $namaKonser; ?></p> -->
-    <p>Harga: Rp<?php echo $hargaTiket; ?></p>
-    <p>Sisa tiket: <?php echo $sisaTiket; ?></p>
-    <p>Kategori Tiket: <?php echo $kategoriTiket; ?></p>
+    <h2>Daftar Konser War Tiket Minggu Ini</h2>
+    <?php foreach ($daftarKonser as $konser) { ?>
+        <div style="border: 1px solid #ccc; padding: 12px; margin-bottom: 8px;">
+        <h3><?php echo $konser["nama"]; ?></h3>
+        <p>Tanggal: <?php echo $konser["tanggal"]; ?></p>
+        <p>Kategori: <?php echo $konser["kategori"]; ?></p>
+        <p>Harga: Rp<?php echo number_format($konser["harga"], 0, ",", "."); ?></p>
+        </div>
+    <?php } ?>
 
    <?php
         $hargaAsli = $daftarKonser[0]["harga"];
