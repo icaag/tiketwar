@@ -130,6 +130,16 @@
             break;
         }
     ?>
+
+    <!-- Latihan Debugging: Perulangan -->
+     <?php 
+        $sisaTiket = 5;
+        
+        while ($sisaTiket > 0) {
+           echo "Tiket tersisa: $sisaTiket <br>";
+           $sisaTiket--;
+        }
+     ?>
     
 </body>
 </html>
