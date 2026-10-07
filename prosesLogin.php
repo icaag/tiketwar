@@ -5,7 +5,7 @@
         header("Location: login.php");
         exit;
     }
-    
+
     $_SESSION["admin"] = [
         "username" => $_POST["username"],
         "login_at" => date("Y-m-d H:i:s")
@@ -13,3 +13,9 @@
 
     header("Location: dashboard.php");
 exit;
+
+// Latihan Debbugging: Session
+// <?php
+// session_start();
+// Isi dashboard.php
+// echo "Halo, " . $_SESSION["admin"]["username"];
